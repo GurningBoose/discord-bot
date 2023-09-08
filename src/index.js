@@ -14,15 +14,14 @@ client.on('ready',(c) => {
     console.log(`✅ ${c.user.tag} is online.`);
 })
 
-client.on('messageCreate', (msg) => {
-    console.log(msg.content);
-    if (msg.author.bot) {
-        return;
-    }
-    if (msg.content === `What are you doing here, drifter?`) {
-        msg.reply(`That's none of your business, ratsack!`);
-    }
-})
+client.on('interactionCreate', (interaction) => {
+    if (!interaction.isChatInputCommand()) return;
+
+    if (interaction.commandName === 'drifter') {
+        interaction.reply('Go fuck yourself, flat-skin.')
+    };
+    console.log(interaction.commandName);
+});
 
 client.login(process.env.TOKEN);
 
