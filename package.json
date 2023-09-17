@@ -9,7 +9,10 @@
   "author": "GurningBoose",
   "license": "ISC",
   "dependencies": {
+    "commandkit": "^0.1.1",
+    "discord-logs": "^2.2.1",
     "discord.js": "^14.13.0",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "ms": "^2.1.3"
   }
 }
